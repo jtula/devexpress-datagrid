@@ -1,0 +1,46 @@
+<h2 class="content-block">Contacts</h2>
+
+<dx-data-grid class="dx-card wide-card"
+  [dataSource]="contactDataSource"
+  [showBorders]="false"
+  [remoteOperations]="true"
+  [focusedRowEnabled]="true"
+  [focusedRowIndex]="0"
+  [columnAutoWidth]="true"
+  [columnHidingEnabled]="true">
+  <dxo-grouping [autoExpandAll]="expanded"></dxo-grouping>
+  <dxo-paging [pageSize]="10"></dxo-paging>
+  <dxo-pager [showPageSizeSelector]="true" [showInfo]="true"></dxo-pager>
+  <dxo-filter-row [visible]="true"></dxo-filter-row>
+  <dxo-editing
+  mode="row"
+  [allowAdding]="true"
+  [allowUpdating]="true"
+  [allowDeleting]="true"
+>
+</dxo-editing>
+  <dxo-toolbar>
+    <dxi-item name="addRowButton" showText="always"></dxi-item>
+    <dxi-item name="exportButton"></dxi-item>
+    <dxi-item name="columnChooserButton"></dxi-item>
+    <dxi-item name="searchPanel"></dxi-item>
+</dxo-toolbar>
+
+  <dxi-column
+    dataField="name"
+    [hidingPriority]="2">
+  </dxi-column>
+  <dxi-column
+    dataField="address"
+    [hidingPriority]="4">
+  </dxi-column>
+  <dxi-column
+    dataField="phone"
+    [hidingPriority]="4">
+  </dxi-column>
+  <dxi-column
+    dataField="email"
+    name="Email"
+    [hidingPriority]="1">
+  </dxi-column>
+</dx-data-grid>
