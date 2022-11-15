@@ -1,7 +1,8 @@
 # Devextreme Contact DataGrid Demo
 
 ## Dependencies
-Demo API(NestJs)
+[Demo API](https://github.com/jtula/contact-api)
+
 
 
 ## Development server
